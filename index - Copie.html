@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CABLETECH | Solutions de Câblage Industriel Haute Performance</title>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        industry: {
+                            50: '#f8fafc',  <!-- slate 50 -->
+                            100: '#f1f5f9', <!-- slate 100 -->
+                            200: '#e2e8f0', <!-- slate 200 -->
+                            600: '#1e40af', <!-- blue 700 - plus saturé -->
+                            700: '#1d4ed8', <!-- blue 600 -->
+                            800: '#0f172a', <!-- slate 900 - plus profond -->
+                            900: '#020617', <!-- slate 950 -->
+                            accent: '#f97316', <!-- orange 600 -->
+                            'accent-hover': '#ea580c', <!-- orange 700 -->
+                        },
+                        text: {
+                            primary: '#1e293b', <!-- slate 800 -->
+                            secondary: '#475569', <!-- slate 600 -->
+                        }
+                    },
+                    backgroundImage: {
+                        'hero-pattern': "linear-gradient(to bottom, rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.95)), url('images/hero.png')",
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Ajustement pour la netteté des polices */
+        body { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+    </style>
+</head>
+<body class="bg-industry-50 text-text-primary font-sans">
+
+    <!-- En-tête / Navbar -->
+    <header class="bg-industry-800 text-white sticky top-0 z-50 shadow-lg border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex items-center space-x-3">
+                    <div class="bg-industry-accent p-2.5 rounded-xl text-white shadow-inner">
+                        <i class="fa-solid fa-bolt text-2xl"></i>
+                    </div>
+                    <span class="text-2xl font-extrabold tracking-tight">CABLE<span class="text-industry-accent">TECH</span></span>
+                </div>
+
+                <!-- Navigation Desktop -->
+                <nav class="hidden md:flex space-x-1 font-medium">
+                    <a href="#accueil" class="px-4 py-2 rounded-lg hover:bg-gray-800 hover:text-white transition-colors duration-200">Accueil</a>
+                    <a href="#produits" class="px-4 py-2 rounded-lg hover:bg-gray-800 hover:text-white transition-colors duration-200">Nos Câbles</a>
+                    <a href="#usine" class="px-4 py-2 rounded-lg hover:bg-gray-800 hover:text-white transition-colors duration-200">L'Usine & Qualité</a>
+                    <a href="#contact" class="px-4 py-2 rounded-lg hover:bg-gray-800 hover:text-white transition-colors duration-200">Contact</a>
+                </nav>
+
+                <!-- Bouton Devis -->
+                <div class="hidden md:block">
+                    <a href="#contact" class="bg-industry-accent hover:bg-industry-accent-hover text-white px-6 py-3 rounded-xl font-semibold transition-all duration-200 shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
+                        Demander un Devis <i class="fa-solid fa-arrow-right ml-2 text-sm"></i>
+                    </a>
+                </div>
+
+                <!-- Bouton Menu Mobile -->
+                <div class="md:hidden">
+                    <button id="mobileMenuBtn" class="text-gray-300 hover:text-white p-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-industry-accent">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Menu Mobile Dropdown -->
+        <div id="mobileMenu" class="hidden md:hidden bg-industry-900 border-t border-gray-800 px-4 pt-3 pb-6 space-y-2 shadow-xl">
+            <a href="#accueil" class="block py-3 px-4 rounded-lg text-gray-200 hover:bg-gray-800 hover:text-white transition">Accueil</a>
+            <a href="#produits" class="block py-3 px-4 rounded-lg text-gray-200 hover:bg-gray-800 hover:text-white transition">Nos Câbles</a>
+            <a href="#usine" class="block py-3 px-4 rounded-lg text-gray-200 hover:bg-gray-800 hover:text-white transition">L'Usine & Qualité</a>
+            <div class="pt-4">
+                <a href="#contact" class="block py-3 px-4 text-center bg-industry-accent hover:bg-industry-accent-hover text-white rounded-xl font-semibold transition">Demander un Devis</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Section Hero (PLUS IMMERSIVE ET TEXTE MIEUX HIÉRARCHISÉ) -->
+    <section id="accueil" class="relative bg-hero-pattern bg-cover bg-center bg-no-repeat text-white py-32 lg:py-48 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="max-w-4xl mx-auto text-center">
+                <span class="inline-flex items-center bg-industry-accent/10 text-industry-accent font-semibold px-4 py-1.5 rounded-full text-sm mb-6 border border-industry-accent/30 shadow-inner">
+                    <i class="fa-solid fa-industry mr-2"></i> Fabricant Industriel Certifié ISO 9001:2015
+                </span>
+                <h1 class="text-5xl sm:text-7xl font-extrabold leading-tight tracking-tighter mb-8">
+                    Câblage <span class="text-industry-accent">Haute Performance</span> pour l'Industrie Mondiale
+                </h1>
+                <p class="text-xl sm:text-2xl text-gray-200 max-w-3xl mx-auto mb-12 leading-relaxed">
+                    De la conception à la distribution, CABLETECH fournit des solutions certifiées pour l'énergie, les télécoms et les environnements critiques.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
+                    <a href="#produits" class="w-full sm:w-auto bg-industry-accent hover:bg-industry-accent-hover text-white text-center font-bold px-10 py-5 rounded-2xl transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-1 text-lg">
+                        Explorer le Catalogue <i class="fa-solid fa-book-open ml-2"></i>
+                    </a>
+                    <a href="#contact" class="w-full sm:w-auto backdrop-blur-sm bg-white/5 border border-gray-500 hover:border-white hover:bg-white/10 text-white text-center font-semibold px-10 py-5 rounded-2xl transition-all duration-200 text-lg">
+                        Bureau d'Études <i class="fa-solid fa-microscope ml-2 text-gray-400"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- Dégradé de fond subtil pour le bas -->
+        <div class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-industry-50 to-transparent"></div>
+    </section>
+
+    <!-- Statistiques / Chiffres Clés (PLUS ÉLÉGANT) -->
+    <section class="relative z-10 -mt-16 mb-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white p-10 rounded-3xl shadow-xl border border-gray-100 grid grid-cols-2 md:grid-cols-4 gap-10 text-center">
+                <div class="border-r border-gray-100 last:border-r-0 pl-4">
+                    <p class="text-5xl font-extrabold text-industry-600 tracking-tight mb-2">+50<span class="text-3xl">k km</span></p>
+                    <p class="text-sm text-text-secondary font-medium uppercase tracking-wider">Produits / an</p>
+                </div>
+                <div class="border-r border-gray-100 last:border-r-0 pl-4">
+                    <p class="text-5xl font-extrabold text-industry-600 tracking-tight mb-2">ISO<span class="text-3xl"> 9001</span></p>
+                    <p class="text-sm text-text-secondary font-medium uppercase tracking-wider">Certification Qualité</p>
+                </div>
+                <div class="border-r border-gray-100 last:border-r-0 pl-4">
+                    <p class="text-5xl font-extrabold text-industry-600 tracking-tight mb-2">100%</p>
+                    <p class="text-sm text-text-secondary font-medium uppercase tracking-wider">Conformité Normes</p>
+                </div>
+                <div class="border-r border-gray-100 last:border-r-0 pl-4">
+                    <p class="text-5xl font-extrabold text-industry-600 tracking-tight mb-2">+25<span class="text-3xl"> ans</span></p>
+                    <p class="text-sm text-text-secondary font-medium uppercase tracking-wider">D'Expertise</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Catalogue Produits (CARTES PLUS MODERNES ET HOVER) -->
+    <section id="produits" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-20">
+            <span class="text-industry-accent font-semibold uppercase tracking-widest text-sm mb-2 block">Catalogue Officiel</span>
+            <h2 class="text-4xl sm:text-5xl font-extrabold text-industry-800 tracking-tighter mb-6">Nos Gammes de Câbles</h2>
+            <p class="text-xl text-text-secondary leading-relaxed">Solutions certifiées pour le bâtiment, l'énergie, l'industrie lourde et les télécommunications.</p>
+            
+            <!-- Filtres JS (STYLE BOUTONS IMPULSION) -->
+            <div class="flex flex-wrap justify-center gap-3 mt-12 bg-industry-100 p-2 rounded-full max-w-3xl mx-auto shadow-inner border border-gray-200" id="filterContainer">
+                <button data-filter="all" class="filter-btn active bg-industry-600 text-white px-6 py-3 rounded-full text-sm font-semibold transition-all duration-200 shadow">Tous</button>
+                <button data-filter="electrique" class="filter-btn text-text-primary hover:bg-white px-6 py-3 rounded-full text-sm font-semibold transition-all duration-200">Énergie & Basse Tension</button>
+                <button data-filter="telecom" class="filter-btn text-text-primary hover:bg-white px-6 py-3 rounded-full text-sm font-semibold transition-all duration-200">Fibre & Télécom</button>
+                <button data-filter="industriel" class="filter-btn text-text-primary hover:bg-white px-6 py-3 rounded-full text-sm font-semibold transition-all duration-200">Câbles Armés / Spéciaux</button>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10" id="productGrid">
+            <!-- Produit 1 -->
+            <div class="product-card group bg-white rounded-3xl shadow-sm hover:shadow-2xl border border-gray-100 overflow-hidden transition-all duration-300 transform hover:-translate-y-2 hover:border-industry-accent/20" data-category="electrique">
+                <div class="h-60 bg-gray-100 overflow-hidden relative">
+                    <img src="images/chautet.jpg" alt="Câble Électrique Haute Tension" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <span class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm text-industry-600 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-sm">Haute Tension</span>
+                </div>
+                <div class="p-8">
+                    <h3 class="text-2xl font-bold text-industry-800 my-3 group-hover:text-industry-600 transition-colors">Câbles Électriques Haute Tension (U-1000 R2V)</h3>
+                    <p class="text-text-secondary text-base mb-6 leading-relaxed">Alimentation industrielle et tertiaire. Haute résistance aux intempéries et UV.</p>
+                    <div class="border-t border-gray-100 pt-6 mb-8">
+                        <ul class="text-sm text-text-secondary space-y-3">
+                            <li class="flex items-center"><i class="fa-solid fa-circle-check text-green-500 mr-3 text-base"></i> Âme : Cuivre nu (massif/câblé)</li>
+                            <li class="flex items-center"><i class="fa-solid fa-circle-check text-green-500 mr-3 text-base"></i> Isolation : XLPE / Gaine PVC</li>
+                        </ul>
+                    </div>
+                    <a href="#contact" class="block text-center bg-industry-100 group-hover:bg-industry-accent text-industry-800 group-hover:text-white font-semibold py-4 rounded-xl transition-all duration-200 text-sm shadow-inner group-hover:shadow-md">Fiche Technique & Devis <i class="fa-solid fa-file-pdf ml-2 opacity-70"></i></a>
+                </div>
+            </div>
+
+            <!-- Produit 2 -->
+            <div class="product-card group bg-white rounded-3xl shadow-sm hover:shadow-2xl border border-gray-100 overflow-hidden transition-all duration-300 transform hover:-translate-y-2 hover:border-industry-accent/20" data-category="telecom">
+                <div class="h-60 bg-gray-100 overflow-hidden relative">
+                    <img src="images/cbasset.webp" alt="Câble Optique Monomode Armé" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <span class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm text-industry-600 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-sm">Fibre Optique</span>
+                </div>
+                <div class="p-8">
+                    <h3 class="text-2xl font-bold text-industry-800 my-3 group-hover:text-industry-600 transition-colors">Basse Tension (Armé)</h3>
+                    <p class="text-text-secondary text-base mb-6 leading-relaxed">Réseaux longue distance et liaisons inter-bâtiments enterrées.</p>
+                    <div class="border-t border-gray-100 pt-6 mb-8">
+                        <ul class="text-sm text-text-secondary space-y-3">
+                            <li class="flex items-center"><i class="fa-solid fa-circle-check text-green-500 mr-3 text-base"></i> Capacité : 4 à 144 fibres</li>
+                            <li class="flex items-center"><i class="fa-solid fa-circle-check text-green-500 mr-3 text-base"></i> Protection : Armature acier anti-rongeurs</li>
+                        </ul>
+                    </div>
+                    <a href="#contact" class="block text-center bg-industry-100 group-hover:bg-industry-accent text-industry-800 group-hover:text-white font-semibold py-4 rounded-xl transition-all duration-200 text-sm shadow-inner group-hover:shadow-md">Fiche Technique & Devis <i class="fa-solid fa-file-pdf ml-2 opacity-70"></i></a>
+                </div>
+            </div>
+
+            <!-- Produit 3 -->
+            <div class="product-card group bg-white rounded-3xl shadow-sm hover:shadow-2xl border border-gray-100 overflow-hidden transition-all duration-300 transform hover:-translate-y-2 hover:border-industry-accent/20" data-category="industriel">
+                <div class="h-60 bg-gray-100 overflow-hidden relative">
+                    <img src="images/cnue.jpg" alt="Câble Souple H07RN-F" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <span class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm text-industry-600 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-sm">Industrie Lourde</span>
+                </div>
+                <div class="p-8">
+                    <h3 class="text-2xl font-bold text-industry-800 my-3 group-hover:text-industry-600 transition-colors">Câbles Nue</h3>
+                    <p class="text-text-secondary text-base mb-6 leading-relaxed">Pour environnements exigeants : chantiers, manutention, chimie.</p>
+                    <div class="border-t border-gray-100 pt-6 mb-8">
+                        <ul class="text-sm text-text-secondary space-y-3">
+                            <li class="flex items-center"><i class="fa-solid fa-circle-check text-green-500 mr-3 text-base"></i> Gaine : Élastomère réticulé (Caoutchouc)</li>
+                            <li class="flex items-center"><i class="fa-solid fa-circle-check text-green-500 mr-3 text-base"></i> Résistance : Huiles & agents chimiques</li>
+                        </ul>
+                    </div>
+                    <a href="#contact" class="block text-center bg-industry-100 group-hover:bg-industry-accent text-industry-800 group-hover:text-white font-semibold py-4 rounded-xl transition-all duration-200 text-sm shadow-inner group-hover:shadow-md">Fiche Technique & Devis <i class="fa-solid fa-file-pdf ml-2 opacity-70"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Qualité & Processus d'Usine (AVEC IMAGE ET MISE EN PAGE ÉQUILIBRÉE) -->
+    <section id="usine" class="bg-industry-100 py-28 border-y border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+                
+                <!-- Contenu Texte (lg:cols-7) -->
+                <div class="lg:col-span-7">
+                    <span class="text-industry-accent font-semibold uppercase tracking-widest text-sm mb-2 block">Engagement Excellence</span>
+                    <h2 class="text-4xl sm:text-5xl font-extrabold text-industry-800 tracking-tighter mb-8 leading-tight">Technologie de Pointe <br>& Contrôle Qualité Total</h2>
+                    <p class="text-xl text-text-secondary mb-10 leading-relaxed">
+                        Notre complexe industriel intègre des lignes d'extrusion de dernière génération. Chaque mètre de câble subit des tests diélectriques, mécaniques et thermiques rigoureux dans notre laboratoire certifié, garantissant une fiabilité absolue sur le terrain.
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex items-start space-x-5 group hover:border-industry-accent/20 transition">
+                            <div class="bg-industry-100 text-industry-accent p-4 rounded-xl group-hover:bg-industry-accent group-hover:text-white transition">
+                                <i class="fa-solid fa-microscope text-2xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-industry-800 mb-1">Laboratoire Certifié</h4>
+                                <p class="text-sm text-text-secondary">Tests de traction, résistance thermique et feu (CEI 60332).</p>
+                            </div>
+                        </div>
+                        <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex items-start space-x-5 group hover:border-industry-accent/20 transition">
+                            <div class="bg-industry-100 text-industry-accent p-4 rounded-xl group-hover:bg-industry-accent group-hover:text-white transition">
+                                <i class="fa-solid fa-leaf text-2xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-industry-800 mb-1">Production Durable</h4>
+                                <p class="text-sm text-text-secondary">Recyclage systématique des chutes de cuivre et polymères.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Image Usine & Calculateur (lg:cols-5) -->
+                <div class="lg:col-span-5 space-y-10">
+                    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=800&auto=format&fit=crop" alt="Ligne de production de câbles haute technologie" class="w-full rounded-3xl shadow-2xl border-4 border-white transform rotate-2">
+                    
+                    <div class="bg-white p-10 rounded-3xl shadow-xl border border-gray-100">
+                        <h3 class="text-2xl font-bold text-industry-800 mb-2">Aide au Dimensionnement</h3>
+                        <p class="text-text-secondary mb-8 text-sm">Estimez rapidement la section de câble requise (Cuivre).</p>
+                        <!-- Formulaire interactif JS simple (STYLE MODERNE) -->
+                        <form id="cableCalcForm" class="space-y-6">
+                            <div>
+                                <label class="block text-sm font-medium text-text-primary mb-2">Puissance Maximale (Watts)</label>
+                                <div class="relative">
+                                    <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-gray-400">
+                                        <i class="fa-solid fa-bolt-lightning"></i>
+                                    </div>
+                                    <input type="number" id="calcPower" placeholder="Ex: 5000" class="w-full pl-12 px-4 py-3.5 border border-gray-200 bg-industry-50 rounded-xl focus:ring-2 focus:ring-industry-600 focus:border-industry-600 focus:bg-white focus:outline-none transition" required>
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-text-primary mb-2">Longueur du Câble (Mètres)</label>
+                                <div class="relative">
+                                    <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-gray-400">
+                                        <i class="fa-solid fa-ruler-horizontal"></i>
+                                    </div>
+                                    <input type="number" id="calcLength" placeholder="Ex: 50" class="w-full pl-12 px-4 py-3.5 border border-gray-200 bg-industry-50 rounded-xl focus:ring-2 focus:ring-industry-600 focus:border-industry-600 focus:bg-white focus:outline-none transition" required>
+                                </div>
+                            </div>
+                            <button type="submit" class="w-full bg-industry-800 hover:bg-industry-900 text-white font-semibold py-4 rounded-xl transition duration-200 shadow hover:shadow-lg">
+                                Estimer la Section <i class="fa-solid fa-calculator ml-2 text-industry-accent"></i>
+                            </button>
+                        </form>
+                        <div id="calcResult" class="hidden mt-6 p-5 bg-industry-50 rounded-xl border border-industry-200 text-industry-800 text-sm leading-relaxed shadow-inner">
+                            <!-- Résultat injecté par JS -->
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Formulaire de Contact & Devis (STYLE CORPORATIF SOMBRE) -->
+    <section id="contact" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-industry-900 text-white rounded-3xl p-12 sm:p-16 shadow-2xl relative overflow-hidden">
+            <!-- Motif de fond subtil -->
+            <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#e2e8f0_1px,transparent_1px)] [background-size:20px_20px]"></div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 relative z-10">
+                <div class="lg:col-span-5">
+                    <span class="text-industry-accent font-semibold uppercase tracking-widest text-sm mb-2 block">Partenariat Commercial</span>
+                    <h2 class="text-4xl sm:text-5xl font-extrabold mb-6 tracking-tighter leading-tight">Demande de Cotation / Devis Gros Volume</h2>
+                    <p class="text-lg text-gray-300 mb-10 leading-relaxed">
+                        Distributeurs, entreprises du BTP, installateurs : contactez notre service commercial pour obtenir une offre personnalisée et les fiches techniques complètes.
+                    </p>
+                    <div class="space-y-6 text-gray-200 border-t border-gray-700 pt-10">
+                        <p class="flex items-center"><i class="fa-solid fa-location-dot text-industry-accent mr-4 text-xl w-6 text-center"></i> Zone Industrielle, Alger, Algérie</p>
+                        <p class="flex items-center"><i class="fa-solid fa-phone text-industry-accent mr-4 text-xl w-6 text-center"></i> +213 (0) 23 XX XX XX</p>
+                        <p class="flex items-center"><i class="fa-solid fa-envelope text-industry-accent mr-4 text-xl w-6 text-center"></i> commercial@cabletech.dz</p>
+                    </div>
+                </div>
+                <div class="lg:col-span-7 bg-white p-10 sm:p-12 rounded-3xl shadow-xl text-text-primary">
+                    <form id="contactForm" class="space-y-6">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <input type="text" placeholder="Nom complet" required class="w-full px-5 py-4 rounded-xl bg-industry-50 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-industry-accent focus:border-industry-accent transition">
+                            <input type="email" placeholder="Email professionnel" required class="w-full px-5 py-4 rounded-xl bg-industry-50 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-industry-accent focus:border-industry-accent transition">
+                        </div>
+                        <input type="text" placeholder="Nom de l'entreprise" class="w-full px-5 py-4 rounded-xl bg-industry-50 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-industry-accent focus:border-industry-accent transition">
+                        <textarea rows="5" placeholder="Détails de votre projet (Type de câble, métrage approximatif, délais...)" required class="w-full px-5 py-4 rounded-xl bg-industry-50 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-industry-accent focus:border-industry-accent transition"></textarea>
+                        <button type="submit" class="w-full bg-industry-accent hover:bg-industry-accent-hover text-white font-bold py-5 rounded-xl transition-all duration-200 shadow-lg hover:shadow-xl text-lg transform hover:-translate-y-0.5">
+                            Envoyer la demande de cotation <i class="fa-solid fa-paper-plane ml-2"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pied de page (ÉPURÉ) -->
+    <footer class="bg-industry-900 text-gray-400 py-12 border-t border-gray-800 text-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col sm:flex-row justify-between items-center gap-6 text-center sm:text-left">
+                <p>&copy; 2026 CABLETECH Usine. Tous droits réservés. <span class="mx-2">|</span> Algérie</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="hover:text-white transition">Mentions Légales</a>
+                    <a href="#" class="hover:text-white transition">Politique Qualité</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
